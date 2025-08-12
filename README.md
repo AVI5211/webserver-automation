@@ -31,6 +31,31 @@ Before starting, ensure you have:
 
 On a **new machine**, update packages and install required tools:
 
+# 🚀 Git Global Configuration Setup for a New GitHub Account
+
+This guide walks you through setting up Git on your laptop and linking it to your **GitHub account** for the first time.
+
+---
+
+## 1️⃣ Install Git
+- Download and install Git from [https://git-scm.com/downloads](https://git-scm.com/downloads)
+- After installation, open **Git Bash** (Windows) or your terminal (Mac/Linux).
+
+---
+
+## 2️⃣ Configure Global Git Settings
+
+Set your **name** and **email** (must match your GitHub account):
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+git config --global user.name "Aviraj Kawade"
+git config --global user.email "avirajbhausahebkawade@gmail.com"
+git config --global --list
+
+
 ```bash
 sudo apt update && sudo apt install -y unzip awscli
 ```
