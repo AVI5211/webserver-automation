@@ -2,8 +2,10 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      git: latest
+    commands:
+      - echo "Installing dependencies..."
+      - apt-get update -y
+      - apt-get install -y git openssh-client
   build:
     commands:
       - echo "Deploying to EC2..."
