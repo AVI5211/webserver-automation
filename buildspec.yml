@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      git: latest
+  build:
+    commands:
+      - echo "Deploying to EC2..."
+      - scp -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa -r ./ ubuntu@$EC2_IP:/home/ubuntu/app
+      - ssh -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa ubuntu@$EC2_IP "bash /home/ubuntu/deploy.sh"
